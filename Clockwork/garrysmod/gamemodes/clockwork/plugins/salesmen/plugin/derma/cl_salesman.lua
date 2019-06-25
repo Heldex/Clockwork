@@ -94,9 +94,9 @@ function PANEL:Init()
 	self.model = self.settingsForm:TextEntry("The model of the salesman.");
 	self.cash = self.settingsForm:NumSlider("Starting Cash", nil, -1, 1000000, 0);
 	
-	self.buyRate:SetToolTip("Percentage of price to keep when selling.");
-	self.stock:SetToolTip("The default stock of each item (-1 for infinite stock).");
-	self.cash:SetToolTip("Starting cash of the salesman (-1 for infinite cash).");
+	self.buyRate:SetTooltip("Percentage of price to keep when selling.");
+	self.stock:SetTooltip("The default stock of each item (-1 for infinite stock).");
+	self.cash:SetToolip("Starting cash of the salesman (-1 for infinite cash).");
 	
 	self.showChatBubble:SetValue(Clockwork.salesman.showChatBubble == true);
 	self.buyInShipments:SetValue(Clockwork.salesman.buyInShipments == true);
@@ -426,7 +426,7 @@ function PANEL:Init()
 	
 	local model, skin = Clockwork.item:GetIconInfo(self.itemTable);
 	self.spawnIcon:SetModel(model, skin);
-	self.spawnIcon:SetToolTip("");
+	self.spawnIcon:SetTooltip("");
 	self.spawnIcon:SetSize(40, 40);
 end;
 
